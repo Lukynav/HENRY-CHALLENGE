@@ -12,6 +12,8 @@ function soloNumeros(array) {
 
   // Tu código aca:
 
+  return array.filter( x => typeof(x) === 'number')
+
 }
 
 // No modifiques nada debajo de esta linea //
