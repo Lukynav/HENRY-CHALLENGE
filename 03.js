@@ -14,9 +14,14 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  let res = null
+  amigos.map( x => {
+    if(x.nombre === nombre){
+      res = x
+    }
+  })
+  return res
 }
-
 // No modifiques nada debajo de esta linea //
 
 module.exports = buscarAmigo
