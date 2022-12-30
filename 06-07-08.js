@@ -11,6 +11,10 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+      this.nombre = nombre,
+      this.edad = edad,
+      this.hobbies = hobbies,
+      this.amigos = amigos
 
     }
 
@@ -20,6 +24,10 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.amigos.push({
+        nombre,
+        edad
+      })
 
     }
 
@@ -28,6 +36,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.hobbies.push(hobby)
 
     }
     getFriends() {
@@ -39,6 +48,9 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      const names = this.amigos.map(x=>x.nombre)
+      return names
+
     }
 
     getHobbies() {
@@ -47,6 +59,8 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
+
+      return this.hobbies
 
     }
 
@@ -67,6 +81,16 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      const edades = this.amigos.map(x => {
+        return x.edad
+      })
+      
+      let total = 0
+      for( let e of edades){
+        total += e
+      }
+
+      return total / edades.length
     }
   };
 
